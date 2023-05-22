@@ -40,5 +40,19 @@ namespace HitBall
             Top10Players top10 = new Top10Players(container);
             top10.Show();
         }
+
+        private void AllPlayers_Click(object sender, EventArgs e)
+        {
+            PlayersContainer container = new PlayersContainer();
+            container.ReadFromFile();
+            container.SortPlayers();
+            AllPlayers top10 = new AllPlayers(container);
+            top10.Show();
+        }
+
+        private void Pause_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
