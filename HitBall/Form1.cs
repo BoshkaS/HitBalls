@@ -31,5 +31,14 @@ namespace HitBall
             Rules rulesForm = new Rules();
             rulesForm.Show();
         }
+
+        private void Top10_Click(object sender, EventArgs e)
+        {
+            PlayersContainer container = new PlayersContainer();
+            container.ReadFromFile();
+            container.SortPlayers();
+            Top10Players top10 = new Top10Players(container);
+            top10.Show();
+        }
     }
 }

@@ -73,6 +73,7 @@
             this.Controls.Add(this.RulesOfGame);
             this.Name = "Rules";
             this.Text = "Rules";
+            this.Load += new System.EventHandler(this.Rules_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

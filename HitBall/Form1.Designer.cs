@@ -74,6 +74,7 @@
             this.Top10.TabIndex = 3;
             this.Top10.Text = "Топ 10 гравців";
             this.Top10.UseVisualStyleBackColor = true;
+            this.Top10.Click += new System.EventHandler(this.Top10_Click);
             // 
             // AllPlayers
             // 

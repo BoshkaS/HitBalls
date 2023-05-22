@@ -74,6 +74,12 @@
     <Compile Include="Rules.Designer.cs">
       <DependentUpon>Rules.cs</DependentUpon>
     </Compile>
+    <Compile Include="Top10Players.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Top10Players.Designer.cs">
+      <DependentUpon>Top10Players.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddNewPlayer.resx">
       <DependentUpon>AddNewPlayer.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +98,9 @@
     <EmbeddedResource Include="Rules.resx">
       <DependentUpon>Rules.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Top10Players.resx">
+      <DependentUpon>Top10Players.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -104,6 +113,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Components\Players.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

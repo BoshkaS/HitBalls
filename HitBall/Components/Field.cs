@@ -86,13 +86,7 @@ namespace HitBall.Components
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            if(IsGameOver())
-            {
-                TimerClear.Stop();
-                Timer.Stop();
-                MessageBox.Show("Ви програли!");
-                return;
-            }
+            
             int size = new Random().Next(30, 51);
 
             CreateNewBall(size);
