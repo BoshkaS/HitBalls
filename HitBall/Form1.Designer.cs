@@ -30,23 +30,79 @@
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.StartMain = new System.Windows.Forms.Button();
+            this.Rules = new System.Windows.Forms.Button();
+            this.Pause = new System.Windows.Forms.Button();
+            this.Top10 = new System.Windows.Forms.Button();
+            this.AllPlayers = new System.Windows.Forms.Button();
+            this.Quit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // StartMain
             // 
-            this.StartMain.Location = new System.Drawing.Point(752, 40);
+            this.StartMain.Location = new System.Drawing.Point(752, 111);
             this.StartMain.Name = "StartMain";
             this.StartMain.Size = new System.Drawing.Size(140, 39);
             this.StartMain.TabIndex = 0;
-            this.StartMain.Text = "Розпочати";
+            this.StartMain.Text = "Розпочати гру";
             this.StartMain.UseVisualStyleBackColor = true;
             this.StartMain.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Rules
+            // 
+            this.Rules.Location = new System.Drawing.Point(752, 32);
+            this.Rules.Name = "Rules";
+            this.Rules.Size = new System.Drawing.Size(140, 39);
+            this.Rules.TabIndex = 1;
+            this.Rules.Text = "Правила гри";
+            this.Rules.UseVisualStyleBackColor = true;
+            this.Rules.Click += new System.EventHandler(this.Rules_Click);
+            // 
+            // Pause
+            // 
+            this.Pause.Location = new System.Drawing.Point(752, 193);
+            this.Pause.Name = "Pause";
+            this.Pause.Size = new System.Drawing.Size(140, 39);
+            this.Pause.TabIndex = 2;
+            this.Pause.Text = "Пауза";
+            this.Pause.UseVisualStyleBackColor = true;
+            // 
+            // Top10
+            // 
+            this.Top10.Location = new System.Drawing.Point(752, 269);
+            this.Top10.Name = "Top10";
+            this.Top10.Size = new System.Drawing.Size(140, 39);
+            this.Top10.TabIndex = 3;
+            this.Top10.Text = "Топ 10 гравців";
+            this.Top10.UseVisualStyleBackColor = true;
+            // 
+            // AllPlayers
+            // 
+            this.AllPlayers.Location = new System.Drawing.Point(752, 345);
+            this.AllPlayers.Name = "AllPlayers";
+            this.AllPlayers.Size = new System.Drawing.Size(140, 39);
+            this.AllPlayers.TabIndex = 4;
+            this.AllPlayers.Text = "Усі гравці";
+            this.AllPlayers.UseVisualStyleBackColor = true;
+            // 
+            // Quit
+            // 
+            this.Quit.Location = new System.Drawing.Point(752, 424);
+            this.Quit.Name = "Quit";
+            this.Quit.Size = new System.Drawing.Size(140, 39);
+            this.Quit.TabIndex = 5;
+            this.Quit.Text = "Вийти";
+            this.Quit.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.Quit);
+            this.Controls.Add(this.AllPlayers);
+            this.Controls.Add(this.Top10);
+            this.Controls.Add(this.Pause);
+            this.Controls.Add(this.Rules);
             this.Controls.Add(this.StartMain);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1000, 700);
@@ -60,6 +116,11 @@
 
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button StartMain;
+        private System.Windows.Forms.Button Rules;
+        private System.Windows.Forms.Button Pause;
+        private System.Windows.Forms.Button Top10;
+        private System.Windows.Forms.Button AllPlayers;
+        private System.Windows.Forms.Button Quit;
     }
 }
 

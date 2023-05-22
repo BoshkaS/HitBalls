@@ -25,5 +25,11 @@ namespace HitBall
             newForm.Show();
             this.Hide();
         }
+
+        private void Rules_Click(object sender, EventArgs e)
+        {
+            Rules rulesForm = new Rules();
+            rulesForm.Show();
+        }
     }
 }

@@ -22,6 +22,8 @@ namespace HitBall.Components
 
         public Action<ColorsOfBall> DecreasePoints { get; set; }
 
+        public Func<bool> IsGameOver { get; set; }
+
         private void CreateNewBall( int size)
         {
             Random random = new Random();
@@ -33,7 +35,7 @@ namespace HitBall.Components
             Balls.Add(newSection);
         }
 
-        public Field(Form1 form, Action<ColorsOfBall> increasePoints, Action<ColorsOfBall> decreasePoints)
+        public Field(Form1 form, Action<ColorsOfBall> increasePoints, Action<ColorsOfBall> decreasePoints, Func<bool> isGameOver)
         {
             fieldUI = new Panel();
             fieldUI.Size = new Size(500, 500);
@@ -43,6 +45,7 @@ namespace HitBall.Components
 
             IncreasePoints = increasePoints;
             DecreasePoints = decreasePoints;
+            IsGameOver = isGameOver;
 
             Timer = new Timer();
             Timer.Interval = 1000;
@@ -81,11 +84,20 @@ namespace HitBall.Components
 
         private void Timer_Tick(object sender, EventArgs e)
         {
+            if(IsGameOver())
+            {
+                TimerClear.Stop();
+                Timer.Stop();
+                MessageBox.Show("Ви програли!");
+                return;
+            }
             int size = new Random().Next(30, 51);
 
             CreateNewBall(size);
-
-            Timer.Interval--;
+            if (Timer.Interval != 1)
+            {
+                Timer.Interval--;
+            }
         }
     }
 }

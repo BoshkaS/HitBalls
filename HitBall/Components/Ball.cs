@@ -49,9 +49,5 @@ namespace HitBall.Components
             IsAlive = false;
             IsSelected = true;
         }
-
-
-
-
     }
 }

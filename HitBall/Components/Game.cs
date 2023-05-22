@@ -16,17 +16,14 @@ namespace HitBall
 
         public Label PointLabel { get; set; }
 
-        public Game(Form1 form,Player player)
+        public List<Player> Players { get; set; }
+
+        public Game(Form1 form, Player player)
         {
             Player = player;
 
             form.Controls.Add(PointLabel);
-            Field = new Field(form, Player.ChooseBall, Player.SkipBall);
-        }
-
-        public void GameOver()
-        {
-
+            Field = new Field(form, Player.ChooseBall, Player.SkipBall, Player.IsOver);
         }
     }
 }

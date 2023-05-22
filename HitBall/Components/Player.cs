@@ -30,7 +30,7 @@ namespace HitBall.Components
         
         public bool IsOver()
         {
-            if (Points <= 100)
+            if (Points <= -100)
             {
                 return true;
             }
