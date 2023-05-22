@@ -24,14 +24,16 @@ namespace HitBall.Components
 
         public Func<bool> IsGameOver { get; set; }
 
-        private void CreateNewBall( int size)
+        private int intervalForBall = 5000; 
+
+        private void CreateNewBall(int size)
         {
             Random random = new Random();
             int x = random.Next() % (fieldUI.Size.Width - 2 * size + 1);
             int y = random.Next() % (fieldUI.Size.Height - 2 * size + 1);
             ColorsOfBall[] allColors = (ColorsOfBall[])Enum.GetValues(typeof(ColorsOfBall));
             ColorsOfBall randomColor = allColors[random.Next() % allColors.Length];
-            var newSection = new Ball(fieldUI, x, y, size, randomColor);
+            var newSection = new Ball(fieldUI, x, y, size, randomColor, intervalForBall);
             Balls.Add(newSection);
         }
 
@@ -54,7 +56,7 @@ namespace HitBall.Components
 
             TimerClear = new Timer();
             TimerClear.Interval = 800;
-            TimerClear.Tick += TimerClear_Tick; ;
+            TimerClear.Tick += TimerClear_Tick;
             TimerClear.Start();
 
             form.Controls.Add(fieldUI);
@@ -94,9 +96,10 @@ namespace HitBall.Components
             int size = new Random().Next(30, 51);
 
             CreateNewBall(size);
-            if (Timer.Interval != 1)
+            if (intervalForBall > 500) intervalForBall -= 200;
+            if (Timer.Interval > 100)
             {
-                Timer.Interval--;
+                Timer.Interval -= 10;
             }
         }
     }

@@ -19,7 +19,7 @@ namespace HitBall.Components
 
         public bool IsAlive { get; set; }
 
-        public Ball(Panel container, int x, int y, int size, ColorsOfBall color)
+        public Ball(Panel container, int x, int y, int size, ColorsOfBall color, int interval)
         {
             Color = color;
             BallUI = new BallUI(container, x, y, size, color);
@@ -30,7 +30,8 @@ namespace HitBall.Components
 
             Timer = new Timer();
 
-            Timer.Interval = 5000;
+            Timer.Interval = interval;
+            
             Timer.Tick += Timer_Tick;
             Timer.Start();
         }

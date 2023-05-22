@@ -13,8 +13,6 @@ namespace HitBall.Components
     {
         public Panel Panel { get; set; }
 
-        public Timer Timer { get; set; }
-
 
         public BallUI(Panel panel, int x, int y, int size, ColorsOfBall color)
         {
