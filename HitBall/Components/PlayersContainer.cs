@@ -47,7 +47,11 @@ namespace HitBall.Components
 
         public void ReadFromFile()
         {
-            string file = @"Players.txt";
+            var all_path = Path.Combine(Directory.GetCurrentDirectory());
+            string delete_path = all_path.Substring(all_path.Length - 10);
+            string path = all_path.Replace(delete_path, "");
+
+            string file = path + "\\Players.txt";
             string[] lines = File.ReadAllLines(file);
             foreach(var item in lines)
             {
