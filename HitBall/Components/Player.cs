@@ -51,7 +51,7 @@ namespace HitBall.Components
 
         public void AddToFile()
         {
-            string file = @"C:\Users\bozen\Documents\2 курс, прога, 2 семестр\HitBall\HitBall\Components\Players.txt";
+            string file = @"Players.txt";
 
             using (StreamWriter sw = File.AppendText(file))
             {

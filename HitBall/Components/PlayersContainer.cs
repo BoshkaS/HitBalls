@@ -47,7 +47,7 @@ namespace HitBall.Components
 
         public void ReadFromFile()
         {
-            string file = @"C:\Users\bozen\Documents\2 курс, прога, 2 семестр\HitBall\HitBall\Components\Players.txt";
+            string file = @"Players.txt";
             string[] lines = File.ReadAllLines(file);
             foreach(var item in lines)
             {
